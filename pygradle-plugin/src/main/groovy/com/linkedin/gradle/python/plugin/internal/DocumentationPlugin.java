@@ -9,7 +9,12 @@ import org.gradle.api.Project;
 import org.gradle.api.tasks.bundling.Compression;
 import org.gradle.api.tasks.bundling.Tar;
 
-import static com.linkedin.gradle.python.util.StandardTextValues.*;
+import static com.linkedin.gradle.python.util.StandardTextValues.CONFIGURATION_PYDOCS;
+import static com.linkedin.gradle.python.util.StandardTextValues.DOCUMENTATION_GROUP;
+import static com.linkedin.gradle.python.util.StandardTextValues.TASK_BUILD_DOCS;
+import static com.linkedin.gradle.python.util.StandardTextValues.TASK_INSTALL_PROJECT;
+import static com.linkedin.gradle.python.util.StandardTextValues.TASK_PACKAGE_DOCS;
+import static com.linkedin.gradle.python.util.StandardTextValues.TASK_PACKAGE_JSON_DOCS;
 
 public class DocumentationPlugin implements Plugin<Project> {
     @Override

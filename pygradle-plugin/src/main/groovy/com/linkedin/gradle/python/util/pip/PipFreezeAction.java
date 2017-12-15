@@ -15,25 +15,19 @@
  */
 package com.linkedin.gradle.python.util.pip;
 
-import java.io.ByteArrayOutputStream;
-import java.io.File;
-import java.util.Collection;
-import java.util.HashSet;
-import java.util.Map;
-import java.util.Objects;
-import java.util.Set;
-
-import org.gradle.api.Action;
-import org.gradle.api.Project;
-import org.gradle.process.ExecSpec;
-
 import com.linkedin.gradle.python.PythonExtension;
 import com.linkedin.gradle.python.util.ExtensionUtils;
 import com.linkedin.gradle.python.util.PackageInfo;
 import com.linkedin.gradle.python.util.StandardTextValues;
+import org.gradle.api.Action;
+import org.gradle.api.Project;
+import org.gradle.process.ExecSpec;
+
+import java.io.ByteArrayOutputStream;
+import java.io.File;
+import java.util.*;
 
 public class PipFreezeAction {
-
     private final Project project;
 
     public PipFreezeAction(Project project) {

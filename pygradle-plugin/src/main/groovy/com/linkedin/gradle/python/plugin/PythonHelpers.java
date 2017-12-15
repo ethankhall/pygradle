@@ -8,6 +8,10 @@ import org.gradle.api.Project;
 
 public class PythonHelpers {
 
+    private PythonHelpers() {
+        //NOOP
+    }
+
     public static final int LINE_WIDTH = 80;
 
     /**

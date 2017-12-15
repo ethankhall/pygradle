@@ -66,7 +66,8 @@ public class PythonFlyerPlugin implements Plugin<Project> {
             task.dependsOn(resourceConf);
             task.doLast(it -> {
                 if (!Paths.get(project.getProjectDir().getAbsolutePath(), "resource").toFile().exists()) {
-                    project.getLogger().lifecycle("Making the Symlink: {}{}resource --> {}", project.getProjectDir(), File.separatorChar, String.valueOf(resourceConf.getSingleFile()));
+                    project.getLogger().lifecycle("Making the Symlink: {}{}resource --> {}",
+                        project.getProjectDir(), File.separatorChar, String.valueOf(resourceConf.getSingleFile()));
                     FileSystemUtils.makeSymLinkUnchecked(resourceConf.getSingleFile(), new File(project.getProjectDir(), "resource"));
                 }
             });
